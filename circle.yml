@@ -8,5 +8,5 @@ dependencies:
 test:
   override:
     - shellcheck --version
-    - shellcheck --exclude=SC2016,SC2054,SC2191 ./*.sh
+    - shellcheck --exclude=SC1117,SC2016,SC2054,SC2191,SC2209 ./*.sh
 
