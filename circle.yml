@@ -1,0 +1,12 @@
+machine:
+  environment:
+    PATH: $HOME/.cabal/bin/:$PATH
+dependencies:
+  override:
+    - cabal update
+    - cabal install shellcheck
+test:
+  override:
+    - shellcheck --version
+    - shellcheck ./*.sh
+
