@@ -3,7 +3,7 @@ machine:
     PATH: .:$PATH
 dependencies:
   override:
-    - curl -JLO https://storage.googleapis.com/shellcheck/shellcheck-latest.linux.x86_64.tar.xz
+    - curl -#JLO https://storage.googleapis.com/shellcheck/shellcheck-latest.linux.x86_64.tar.xz
     - tar xf shellcheck-latest.linux.x86_64.tar.xz --strip-components=1 --overwrite
 test:
   override:
