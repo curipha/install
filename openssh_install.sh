@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=OpenSSH
-VERSION=7.5p1
+VERSION=7.6p1
 CONFIGURE_OPT=( --with-ssl-engine )
 
 URIFORMAT='http://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
