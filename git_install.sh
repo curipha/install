@@ -87,10 +87,10 @@ PREFIX="${HOME}/app/${APPLICATION,,}"
 
 # Make
 puts Making...
-${MAKE} prefix="${PREFIX}" CFLAGS="$CFLAGS" "${CONFIGURE_OPT[@]}" all > /dev/null
+${MAKE} prefix="${PREFIX}" CFLAGS="${CFLAGS:--O2 -pipe -w}" "${CONFIGURE_OPT[@]}" all > /dev/null
 
 puts Installing...
-${MAKE} prefix="${PREFIX}" CFLAGS="$CFLAGS" "${CONFIGURE_OPT[@]}" install > /dev/null
+${MAKE} prefix="${PREFIX}" CFLAGS="${CFLAGS:--O2 -pipe -w}" "${CONFIGURE_OPT[@]}" install > /dev/null
 
 # Clean up
 puts Cleaning...
