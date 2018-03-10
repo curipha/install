@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/buildpack-deps:latest
+    steps:
+      - checkout
+      - run:
+          name: Install ShellCheck
+          command: sudo apt-get install --assume-yes shellcheck
+      - run:
+          name: System information
+          command: uname -a
+      - run:
+          name: ShellCheck version
+          command: shellcheck --version
+      - run:
+          name: Run ShellCheck
+          command: shellcheck --exclude=SC1117,SC2016,SC2054,SC2191,SC2209 ./*.sh
