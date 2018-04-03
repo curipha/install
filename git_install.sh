@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=Git
-VERSION=2.16.1
+VERSION=2.17.0
 CONFIGURE_OPT=( USE_LIBPCRE=1 NO_EXPAT=1 NO_TCLTK=1 )
 
 URIFORMAT='https://www.kernel.org/pub/software/scm/git/git-${VERSION}.tar.xz'
