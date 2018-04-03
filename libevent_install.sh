@@ -69,7 +69,7 @@ curl -q --location --remote-name-all --progress-bar --tlsv1.2 "${URI}" "${URI_SI
 puts Verifying...
 SIG_FILE=${URI_SIG##*/}
 gpg \
-  --keyserver hkp://pgp.mit.edu:80 \
+  --keyserver hkp://p80.pool.sks-keyservers.net:80 \
   --keyserver-options timeout=5    \
   --recv-keys "$(gpg --list-packets "${SIG_FILE}" | grep -m1 keyid | grep -Eo '[0-9A-F]{16}')" || abort Failed to receive key
 gpg --verify "${SIG_FILE}" || abort Failed to verify signature
