@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=OpenSSH
-VERSION=7.7p1
+VERSION=7.8p1
 CONFIGURE_OPT=( --with-ssl-engine )
 
 URIFORMAT='https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
