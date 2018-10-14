@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=Git
-VERSION=2.18.0
+VERSION=2.19.1
 CONFIGURE_OPT=( USE_LIBPCRE1=1 NO_EXPAT=1 NO_TCLTK=1 ) # Change to USE_LIBPCRE2 if you want to use PCRE v2
 
 URIFORMAT='https://www.kernel.org/pub/software/scm/git/git-${VERSION}.tar.xz'
