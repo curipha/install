@@ -9,8 +9,8 @@ APPLICATION=OpenSSH
 VERSION=7.9p1
 CONFIGURE_OPT=( --with-ssl-engine )
 
-URIFORMAT='https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
-URIFORMAT_SIG='https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz.asc'
+URIFORMAT='https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
+URIFORMAT_SIG='https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz.asc'
 
 
 # Functions
