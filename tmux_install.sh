@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=tmux
-VERSION=2.8
+VERSION=2.9a
 
 URIFORMAT='https://github.com/tmux/tmux/releases/download/${VERSION}/tmux-${VERSION}.tar.gz'
 
