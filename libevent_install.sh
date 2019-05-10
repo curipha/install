@@ -7,7 +7,7 @@ set -o errexit
 
 APPLICATION=libevent
 VERSION=2.1.8-stable
-CONFIGURE_OPT=( --disable-thread-support --disable-openssl --disable-debug-mode )
+CONFIGURE_OPT=( --disable-samples )
 
 URIFORMAT='https://github.com/libevent/libevent/releases/download/release-${VERSION}/libevent-${VERSION}.tar.gz'
 URIFORMAT_SIG='https://github.com/libevent/libevent/releases/download/release-${VERSION}/libevent-${VERSION}.tar.gz.asc'
