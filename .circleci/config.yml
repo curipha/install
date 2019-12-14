@@ -6,9 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: System information
-          command: uname -a
-      - run:
           name: ShellCheck version
           command: shellcheck --version
       - run:
