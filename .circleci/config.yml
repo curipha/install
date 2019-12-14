@@ -13,4 +13,4 @@ jobs:
           command: shellcheck --version
       - run:
           name: Run ShellCheck
-          command: shellcheck --exclude=SC2016,SC2054,SC2191 ./*.sh
+          command: shellcheck --exclude=SC2016,SC2054,SC2209,SC2191 ./*.sh
