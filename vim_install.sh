@@ -14,14 +14,11 @@ URI="https://github.com/vim/vim.git"
 # Functions
 help() {
   cat <<HELP 1>&2
-Usage: ${0} [-l <luaprefix>]
-
-  -l <luaprefix>  Enable Lua with <luaprefix> as its prefix
-                  (If <luaprefix> = "-", it treats that Lua exists on PATH.)
+Usage: ${0}
 
 Example:
-  ${0} -l \$HOME/app/lua
-      Install latest ${APPLICATION} with Lua
+  ${0}
+      Install latest ${APPLICATION}
 HELP
 
   exit
@@ -38,10 +35,6 @@ abort() {
 
 while getopts hl: ARG; do
   case $ARG in
-    "l" )
-      CONFIGURE_OPT+=( --enable-luainterp )
-      [[ "${OPTARG}" != "-" ]] && CONFIGURE_OPT+=( --with-lua-prefix="${OPTARG}" )
-    ;;
     * ) help;;
   esac
 done
