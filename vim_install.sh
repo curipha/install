@@ -8,11 +8,11 @@ set -o errexit
 APPLICATION=Vim
 CONFIGURE_OPT=(
   --with-features=normal
+  --enable-fail-if-missing
   --enable-multibyte
   --enable-terminal
-  --disable-netbeans
   --disable-darwin
-  --enable-fail-if-missing
+  --disable-netbeans
 )
 
 URI="https://github.com/vim/vim.git"
