@@ -11,7 +11,6 @@ CONFIGURE_OPT=(
   --enable-fail-if-missing
   --enable-multibyte
   --enable-terminal
-  --disable-darwin
   --disable-netbeans
 )
 
