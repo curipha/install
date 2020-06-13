@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=Ruby
-VERSION=2.4.2
+VERSION=2.7.1
 CONFIGURE_OPT=( --enable-shared --with-out-ext="*dbm*,*win32*" --disable-install-doc )
 
 URIFORMAT='https://cache.ruby-lang.org/pub/ruby/${VERSION:0:3}/ruby-${VERSION}.tar.xz'
