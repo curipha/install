@@ -6,7 +6,13 @@ set -o nounset
 set -o errexit
 
 APPLICATION=Vim
-CONFIGURE_OPT=( --with-features=normal --enable-multibyte --enable-terminal --disable-netbeans --enable-fail-if-missing )
+CONFIGURE_OPT=(
+  --with-features=normal
+  --enable-fail-if-missing
+  --enable-multibyte
+  --enable-terminal
+  --disable-netbeans
+)
 
 URI="https://github.com/vim/vim.git"
 
