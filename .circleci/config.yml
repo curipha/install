@@ -32,6 +32,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Compiler version
+          command: cc --version
+      - run:
           name: << parameters.file >> (gcc:<< parameters.version >>)
           command: ./<< parameters.file >>
 
