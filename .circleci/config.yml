@@ -7,6 +7,8 @@ executors:
         type: string
     docker:
       - image: buildpack-deps:<< parameters.version >>
+    environment:
+      TAR_OPTIONS: --no-same-owner
 
 jobs:
   lint:
