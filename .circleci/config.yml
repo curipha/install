@@ -1,12 +1,12 @@
 version: 2.1
 
 executors:
-  ubuntu:
+  gcc:
     parameters:
       version:
         type: string
     docker:
-      - image: ubuntu:<< parameters.version >>
+      - image: gcc:<< parameters.version >>
 
 jobs:
   lint:
@@ -27,12 +27,12 @@ jobs:
       file:
         type: string
     executor:
-      name: ubuntu
+      name: gcc
       version: << parameters.version >>
     steps:
       - checkout
       - run:
-          name: << parameters.file >> (Ubuntu:<< parameters.version >>)
+          name: << parameters.file >> (gcc:<< parameters.version >>)
           command: ./<< parameters.file >>
 
 workflows:
@@ -45,8 +45,10 @@ workflows:
           matrix:
             parameters:
               version:
-                - latest
-                - rolling
+                - 10
+                - 9
+                - 8
+                - 7
               file:
                 - git_install.sh
                 - libevent_install.sh
