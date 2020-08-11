@@ -45,10 +45,10 @@ workflows:
           matrix:
             parameters:
               version:
-                - 10
-                - 9
-                - 8
-                - 7
+                - "10"
+                - "9"
+                - "8"
+                - "7"
               file:
                 - git_install.sh
                 - libevent_install.sh
