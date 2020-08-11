@@ -40,6 +40,8 @@ workflows:
     jobs:
       - lint
       - build:
+          requires:
+            - lint
           matrix:
             parameters:
               version:
