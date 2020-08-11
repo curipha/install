@@ -1,6 +1,15 @@
-version: 2
+version: 2.1
+
+executors:
+  ubuntu:
+    parameters:
+      version:
+        type: string
+    docker:
+      - image: ubuntu:<< parameters.version >>
+
 jobs:
-  build:
+  lint:
     docker:
       - image: koalaman/shellcheck-alpine:stable
     steps:
@@ -11,3 +20,35 @@ jobs:
       - run:
           name: Run ShellCheck
           command: shellcheck --exclude=SC2016,SC2209 -- ./*.sh
+  build:
+    parameters:
+      version:
+        type: string
+      file:
+        type: string
+    executor:
+      name: ubuntu
+      version: << parameters.version >>
+    steps:
+      - checkout
+      - run:
+          name: << parameters.file >> (Ubuntu:<< parameters.version >>)
+          command: ./<< parameters.file >>
+
+workflows:
+  lints:
+    jobs:
+      - lint
+      - build:
+          matrix:
+            parameters:
+              version:
+                - latest
+                - rolling
+              file:
+                - git_install.sh
+                - libevent_install.sh
+                - openssh_install.sh
+                - ruby_install.sh
+                - tmux_install.sh
+                - vim_install.sh
