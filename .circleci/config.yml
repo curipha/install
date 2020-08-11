@@ -1,12 +1,12 @@
 version: 2.1
 
 executors:
-  gcc:
+  buildrunner:
     parameters:
       version:
         type: string
     docker:
-      - image: gcc:<< parameters.version >>
+      - image: buildpack-deps:<< parameters.version >>
 
 jobs:
   lint:
@@ -27,7 +27,7 @@ jobs:
       file:
         type: string
     executor:
-      name: gcc
+      name: buildrunner
       version: << parameters.version >>
     steps:
       - checkout
@@ -35,7 +35,7 @@ jobs:
           name: Compiler version
           command: cc --version
       - run:
-          name: << parameters.file >> (gcc:<< parameters.version >>)
+          name: << parameters.file >> (<< parameters.version >>)
           command: ./<< parameters.file >>
 
 workflows:
@@ -48,10 +48,8 @@ workflows:
           matrix:
             parameters:
               version:
-                - "10"
-                - "9"
-                - "8"
-                - "7"
+                - 20.04
+                - 18.04
               file:
                 - git_install.sh
                 - libevent_install.sh
