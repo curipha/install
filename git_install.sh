@@ -96,4 +96,3 @@ ${MAKE} prefix="${PREFIX}" CFLAGS="${CFLAGS:--O2 -pipe -w}" "${CONFIGURE_OPT[@]}
 puts Cleaning...
 cd "${CUR_DIR}" || exit
 rm -fr "${TMP_DIR}"
-

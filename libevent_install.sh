@@ -98,4 +98,3 @@ ${MAKE} install > /dev/null
 puts Cleaning...
 cd "${CUR_DIR}" || exit
 rm -fr "${TMP_DIR}"
-
