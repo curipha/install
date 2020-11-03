@@ -51,7 +51,6 @@ workflows:
             parameters:
               version:
                 - "20.04"
-                - "18.04"
               file:
                 - git_install.sh
                 - libevent_install.sh
