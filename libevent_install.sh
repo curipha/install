@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=libevent
-VERSION=2.1.8-stable
+VERSION=2.1.12-stable
 CONFIGURE_OPT=( --disable-samples )
 
 URIFORMAT='https://github.com/libevent/libevent/releases/download/release-${VERSION}/libevent-${VERSION}.tar.gz'

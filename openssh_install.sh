@@ -6,7 +6,7 @@ set -o nounset
 set -o errexit
 
 APPLICATION=OpenSSH
-VERSION=8.2p1
+VERSION=8.4p1
 CONFIGURE_OPT=( --with-ssl-engine )
 
 URIFORMAT='https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
