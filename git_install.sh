@@ -71,7 +71,7 @@ SIG_FILE=${URI_SIG##*/}
 unxz --quiet --keep "${URI##*/}"
 gpg \
   --keyserver hkps://keyserver.ubuntu.com:443 \
-  --keyserver-options timeout=5    \
+  --keyserver-options timeout=10 \
   --recv-keys "$(gpg --list-packets "${SIG_FILE}" | grep -m1 keyid | grep -Eo '[0-9A-F]{16}')" || abort Failed to receive key
 gpg --verify "${SIG_FILE}" || abort Failed to verify signature
 
