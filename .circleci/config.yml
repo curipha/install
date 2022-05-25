@@ -50,7 +50,7 @@ workflows:
           matrix:
             parameters:
               version:
-                - "20.04"
+                - "22.04"
               file:
                 - git_install.sh
                 - libevent_install.sh
