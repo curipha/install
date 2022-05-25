@@ -7,7 +7,7 @@ set -o nounset
 set -o pipefail
 
 APPLICATION=Ruby
-VERSION=3.1.0
+VERSION=3.1.2
 CONFIGURE_OPT=( --enable-shared --with-out-ext="*dbm*,*win32*" --disable-install-doc )
 
 URIFORMAT='https://cache.ruby-lang.org/pub/ruby/${VERSION:0:3}/ruby-${VERSION}.tar.xz'
