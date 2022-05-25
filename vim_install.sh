@@ -11,7 +11,6 @@ CONFIGURE_OPT=(
   --with-features=normal
   --enable-fail-if-missing
   --enable-multibyte
-  --enable-terminal
   --disable-netbeans
 )
 
