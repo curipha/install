@@ -2,8 +2,9 @@
 
 # Install OpenSSH
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=OpenSSH
 VERSION=8.8p1

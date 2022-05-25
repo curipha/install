@@ -2,8 +2,9 @@
 
 # Install libevent
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=libevent
 VERSION=2.1.12-stable

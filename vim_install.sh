@@ -2,8 +2,9 @@
 
 # Install Vim
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=Vim
 CONFIGURE_OPT=(

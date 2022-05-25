@@ -2,8 +2,9 @@
 
 # Install Ruby
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=Ruby
 VERSION=3.1.0

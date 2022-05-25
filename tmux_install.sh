@@ -2,8 +2,9 @@
 
 # Install tmux
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=tmux
 VERSION=3.2a

@@ -2,8 +2,9 @@
 
 # Install Git
 
-set -o nounset
 set -o errexit
+set -o nounset
+set -o pipefail
 
 APPLICATION=Git
 VERSION=2.35.1
