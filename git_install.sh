@@ -7,7 +7,7 @@ set -o nounset
 set -o pipefail
 
 APPLICATION=Git
-VERSION=2.36.1
+VERSION=2.39.2
 CONFIGURE_OPT=( USE_LIBPCRE=1 NO_EXPAT=1 NO_TCLTK=1 NO_GETTEXT=1 )
 
 URIFORMAT='https://www.kernel.org/pub/software/scm/git/git-${VERSION}.tar.xz'
