@@ -7,7 +7,7 @@ set -o nounset
 set -o pipefail
 
 APPLICATION=OpenSSH
-VERSION=9.0p1
+VERSION=9.2p1
 CONFIGURE_OPT=( --with-ssl-engine )
 
 URIFORMAT='https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${VERSION}.tar.gz'
