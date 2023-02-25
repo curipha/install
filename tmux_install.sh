@@ -7,7 +7,7 @@ set -o nounset
 set -o pipefail
 
 APPLICATION=tmux
-VERSION=3.2a
+VERSION=3.3a
 
 URIFORMAT='https://github.com/tmux/tmux/releases/download/${VERSION}/tmux-${VERSION}.tar.gz'
 
