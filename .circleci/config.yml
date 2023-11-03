@@ -55,6 +55,5 @@ workflows:
                 - git_install.sh
                 - libevent_install.sh
                 - openssh_install.sh
-                # - ruby_install.sh # It takes long time for compiling and is rarely used
                 - tmux_install.sh
                 - vim_install.sh
